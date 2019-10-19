@@ -12,7 +12,7 @@ RUN composer install
 
 RUN cp includes/config.environment.inc.php includes/config.inc.php
 
-EXPOSE 80
+EXPOSE 8080
 # switch to non-root for openshift usage
 USER 1001
 ENTRYPOINT [ "tini", "--", "php", "-S", "0.0.0.0:8080" ]
